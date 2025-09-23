@@ -67,18 +67,19 @@
             </div>
           </a>
           
-          <nav class="hidden lg:flex items-center gap-6">
-            <a href="#home" class="nav-link">হোম</a>
-            <a href="#products" class="nav-link">পণ্যসমূহ</a>
-            <a href="#offers" class="nav-link">অফার</a>
-            <a href="#about" class="nav-link">আমাদের সম্পর্কে</a>
-            <a href="#reviews" class="nav-link">রিভিউ</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-            <a href="#contact" class="nav-link">যোগাযোগ</a>
-          </nav>
+          <!-- Search Bar (Desktop) -->
+          <div class="relative flex-1 hidden lg:flex justify-center px-8">
+              <input type="search" id="search-bar" placeholder="পণ্য খুঁজুন..." class="w-full max-w-lg pl-10 pr-4 py-2 border rounded-full bg-input text-foreground focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all">
+              <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </div>
 
           <div class="flex items-center gap-2">
-            <a href="#products" class="btn-primary hidden sm:inline-block px-4 py-2 rounded-md text-sm">অর্ডার করুন</a>
+            <nav class="hidden lg:flex items-center gap-6">
+              <a href="#home" class="nav-link">হোম</a>
+              <a href="#products" class="nav-link">পণ্যসমূহ</a>
+              <a href="#about" class="nav-link">আমাদের সম্পর্কে</a>
+              <a href="#contact" class="nav-link">যোগাযোগ</a>
+            </nav>
             <button id="cart-btn" class="relative p-2 rounded-full hover:bg-accent hover:text-primary transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
               <span id="cart-item-count" class="absolute -top-1 -right-1 bg-secondary text-secondary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-scale-in hidden">0</span>
@@ -93,7 +94,14 @@
           </div>
         </div>
         <div id="mobile-menu" class="hidden lg:hidden py-4 border-t border-border">
-          <nav class="flex flex-col gap-4">
+          <!-- Search Bar (Mobile) -->
+          <div class="px-4 mb-4">
+              <div class="relative">
+                  <input type="search" id="mobile-search-bar" placeholder="পণ্য খুঁজুন..." class="w-full pl-10 pr-4 py-2 border rounded-full bg-input text-foreground focus:ring-primary focus:border-primary transition-all duration-300" />
+                  <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
+          </div>
+          <nav class="flex flex-col gap-4 px-4">
             <a href="#home" class="nav-link">হোম</a>
             <a href="#products" class="nav-link">পণ্যসমূহ</a>
             <a href="#offers" class="nav-link">অফার</a>
@@ -147,7 +155,7 @@
                 <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">আমাদের সম্পর্কে</span>
                 <h2 class="text-4xl font-bold text-gradient mb-6">সবকিছু.com – আমাদের পরিচয়</h2>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 <div class="space-y-6">
                     <div class="space-y-4 p-6 card-modern">
                         <p class="text-lg text-foreground leading-relaxed"><strong>সবকিছু.com</strong> একটি অনলাইন প্ল্যাটফর্ম যেখানে এক ক্লিকেই পাওয়া যায় আপনার দৈনন্দিন জীবনের সব প্রয়োজনীয় জিনিস।</p>
@@ -162,9 +170,16 @@
                             <div class="flex items-start gap-3"><div class="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center mt-0.5 shrink-0"><span class="text-success">✓</span></div><span class="text-foreground leading-relaxed">সহজ অর্ডার প্রক্রিয়া, দ্রুত ডেলিভারি</span></div>
                         </div>
                     </div>
+                    <div class="p-6 card-modern">
+                        <p class="text-foreground leading-relaxed"><strong>সবকিছু.com</strong>-এর মূল লক্ষ্য — আধুনিক প্রযুক্তিকে কাজে লাগিয়ে মানুষের জীবনকে সহজ করা। আমরা চাই, আপনার কেনাকাটা হোক ঝামেলাহীন, নিরাপদ ও আনন্দদায়ক।</p>
+                    </div>
+                    <div class="text-center p-6 bg-gradient-primary text-primary-foreground rounded-xl shadow-lg">
+                        <p class="text-xl font-bold">👉 কারণ, 'যা দরকার, তাই পাবেন – সবকিছু.com'</p>
+                    </div>
                 </div>
                 <div class="space-y-6">
                     <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"><span class="text-primary">🛡️</span></div><div class="space-y-1"><h4 class="text-lg font-bold text-foreground">গুণমান নিশ্চয়তা</h4><p class="text-muted-foreground leading-relaxed">প্রতিটি পণ্য কঠোর মান নিয়ন্ত্রণের মধ্য দিয়ে পরীক্ষিত।</p></div></div></div></div>
+                    <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"><span class="text-primary">🔐</span></div><div class="space-y-1"><h4 class="text-lg font-bold text-foreground">নিরাপদ কেনাকাটা</h4><p class="text-muted-foreground leading-relaxed">সুরক্ষিত পেমেন্ট ও ব্যক্তিগত তথ্যের গোপনীয়তা।</p></div></div></div></div>
                     <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"><span class="text-primary">🚚</span></div><div class="space-y-1"><h4 class="text-lg font-bold text-foreground">দ্রুত ডেলিভারি</h4><p class="text-muted-foreground leading-relaxed">সারা বাংলাদেশে দ্রুততম ডেলিভারি সেবা।</p></div></div></div></div>
                     <div class="card-modern bg-gradient-secondary text-secondary-foreground"><div class="p-6"><div class="grid grid-cols-2 gap-6 text-center"><div><div class="text-2xl font-bold">500+</div><div class="text-sm opacity-90">সন্তুষ্ট গ্রাহক</div></div><div><div class="text-2xl font-bold">98%</div><div class="text-sm opacity-90">পণ্যের গুণমান</div></div></div></div></div>
                 </div>
@@ -189,7 +204,7 @@
               <img src="assets/male2.png" alt="ইমরান খান" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary/50">
               <h4 class="font-bold text-lg">ইমরান খান</h4>
               <div class="flex justify-center my-2 text-yellow-400">★★★★★</div>
-              <p class="text-muted-foreground italic">"অর্ডার করার ২ দিনের মধ্যেই ডেলিভারি পেয়েছি। প্যাকেজিংও খুব ভালো ছিল। ধন্যবাদ সবকিছু.com। "</p>
+              <p class="text-muted-foreground italic">"অর্ডার করার 2 দিনের মধ্যেই ডেলিভারি পেয়েছি। প্যাকেজিংও খুব ভালো ছিল। ধন্যবাদ সবকিছু.com। "</p>
             </div>
             <div class="card-modern p-6 text-center">
               <img src="assets/male3.png" alt="সাকিব আল হাসান" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary/50">
@@ -210,11 +225,11 @@
           <div class="space-y-4">
             <details class="faq-item">
               <summary class="faq-question">আপনারা কোথায় ডেলিভারি করেন?</summary>
-              <p class="faq-answer">আমরা সমগ্র বাংলাদেশ জুড়ে আমাদের পণ্য ডেলিভারি করে থাকি। ঢাকার মধ্যে ডেলিভারি চার্জ ৭০ টাকা এবং ঢাকার বাইরে ১৩০ টাকা। তবে বিশেষ অফারে ফ্রি ডেলিভারিও দেওয়া হয়।</p>
+              <p class="faq-answer">আমরা সমগ্র বাংলাদেশ জুড়ে আমাদের পণ্য ডেলিভারি করে থাকি। ঢাকার মধ্যে ডেলিভারি চার্জ 70 টাকা এবং ঢাকার বাইরে 130 টাকা। তবে বিশেষ অফারে ফ্রি ডেলিভারিও দেওয়া হয়।</p>
             </details>
             <details class="faq-item">
               <summary class="faq-question">অর্ডার করতে কতদিন সময় লাগে?</summary>
-              <p class="faq-answer">ঢাকার মধ্যে সাধারণত ২৪-৪৮ ঘণ্টা এবং ঢাকার বাইরে ২-৪ কার্যদিবসের মধ্যে পণ্য ডেলিভারি করা হয়।</p>
+              <p class="faq-answer">ঢাকার মধ্যে সাধারণত 24-48 ঘণ্টা এবং ঢাকার বাইরে 2-4 কার্যদিবসের মধ্যে পণ্য ডেলিভারি করা হয়।</p>
             </details>
             <details class="faq-item">
               <summary class="faq-question">পণ্য হাতে পেয়ে টাকা দেওয়ার সুযোগ আছে?</summary>
@@ -224,6 +239,27 @@
               <summary class="faq-question">পণ্যের গুণমান নিয়ে সন্তুষ্ট না হলে কী করণীয়?</summary>
               <p class="faq-answer">আমরা পণ্যের গুণগত মানের ব্যাপারে শতভাগ আত্মবিশ্বাসী। তবুও কোনো সমস্যা হলে, আমাদের কাস্টমার সাপোর্টে যোগাযোগ করলে আমরা দ্রুত সমাধানের ব্যবস্থা করব।</p>
             </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Section Restored -->
+      <section class="py-16">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">🤝 আমাদের পার্টনার 🤝</span>
+            <h2 class="text-4xl font-bold text-gradient">যাদের পেয়ে আমরা গর্বিত</h2>
+            <p class="text-muted-foreground mt-4 max-w-2xl mx-auto">আমরা গর্বিতভাবে Suddho Deal-এর সাথে পার্টনারশিপ করেছি আপনাদের কাছে সেরা মানের পণ্য পৌঁছে দেওয়ার জন্য।</p>
+          </div>
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-12 md:gap-20">
+            <div class="text-center">
+              <img src="assets/logo_3.jpg" alt="সবকিছু.com Logo" class="h-28 w-28 mx-auto rounded-full object-contain shadow-elegant transition-transform duration-300 hover:scale-110" />
+              <p class="mt-4 font-bold text-xl text-foreground">সবকিছু.com</p>
+            </div>
+            <div class="text-center">
+              <img src="assets/suddhodeal.jpg" alt="Suddho Deal Logo" class="h-28 w-28 mx-auto rounded-full object-contain shadow-elegant transition-transform duration-300 hover:scale-110" />
+              <p class="mt-4 font-bold text-xl text-foreground">Suddho Deal</p>
+            </div>
           </div>
         </div>
       </section>
@@ -260,7 +296,6 @@
               </div>
           </div>
       </section>
-
     </main>
 
     <footer class="bg-gradient-subtle border-t border-border mt-16">

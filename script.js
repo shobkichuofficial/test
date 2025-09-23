@@ -3,10 +3,10 @@ const SPREADSHEET_URL = "https://script.google.com/macros/s/AKfycbzQCjKrtEMu4jj5
 
 // --- Product Data ---
 const PRODUCTS = [
-  { id: "balachao_1kg", name: "চিংড়ি বালাচাও (1 কেজি)", price: 1099, image: "assets/prodact6.jpg", description: "বিশেষ অফার! ১ কেজির এই প্যাকে পাচ্ছেন ফ্রি ডেলিভারি!", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "ডেলিভারি চার্জ ফ্রি"], freeDelivery: true },
-  { id: "balachao_800g", name: "চিংড়ি বালাচাও (800 গ্রাম)", price: 899, image: "assets/prodact5.jpg", description: "বিশেষ অফার! ৮০০ গ্রামের এই প্যাকে পাচ্ছেন ফ্রি ডেলিভারি!", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "ডেলিভারি চার্জ ফ্রি"], freeDelivery: true },
-  { id: "balachao_500g", name: "চিংড়ি বালাচাও (500 গ্রাম)", price: 649, image: "assets/prodact4.jpg", description: "বিশেষ অফার! ৫০০ গ্রামের এই প্যাকে পাচ্ছেন ফ্রি ডেলিভারি!", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "ডেলিভারি চার্জ ফ্রি"], freeDelivery: true },
-  { id: "balachao_300g", name: "চিংড়ি বালাচাও (300 গ্রাম)", price: 350, image: "assets/prodact3.jpg", description: "নতুন অফার! ৩০০ গ্রামের প্যাকে ঝালের স্বাদ আর খাঁটি চিংড়ির অনন্য সংমিশ্রণ।", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "ডেলিভারি চার্জ প্রযোজ্য"], freeDelivery: false },
+  { id: "balachao_1kg", name: "চিংড়ি বালাচাও (1 কেজি)", price: 1099, image: "assets/prodact6.jpg", description: "বিশেষ অফার! 1 কেজির এই প্যাকে পাচ্ছেন ফ্রি ডেলিভারি!", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "ডেলিভারি চার্জ ফ্রি"], freeDelivery: true },
+  { id: "balachao_800g", name: "চিংড়ি বালাচাও (800 গ্রাম)", price: 899, image: "assets/prodact5.jpg", description: "বিশেষ অফার! 800 গ্রামের এই প্যাকে পাচ্ছেন ফ্রি ডেলিভারি!", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "ডেলিভারি চার্জ ফ্রি"], freeDelivery: true },
+  { id: "balachao_500g", name: "চিংড়ি বালাচাও (500 গ্রাম)", price: 649, image: "assets/prodact4.jpg", description: "বিশেষ অফার! 500 গ্রামের এই প্যাকে পাচ্ছেন ফ্রি ডেলিভারি!", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "ডেলিভারি চার্জ ফ্রি"], freeDelivery: true },
+  { id: "balachao_300g", name: "চিংড়ি বালাচাও (300 গ্রাম)", price: 350, image: "assets/prodact3.jpg", description: "নতুন অফার! 300 গ্রামের প্যাকে ঝালের স্বাদ আর খাঁটি চিংড়ির অনন্য সংমিশ্রণ।", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "ডেলিভারি চার্জ প্রযোজ্য"], freeDelivery: false },
   { id: "balachao_150g", name: "চিংড়ি বালাচাও (150 গ্রাম)", price: 195, image: "assets/prodact_150.jpg", description: "ঝালের স্বাদ আর খাঁটি চিংড়ির অনন্য সংমিশ্রণ। ঘরে বসেই অর্ডার করুন।", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "উন্নতমানের উপাদান"], freeDelivery: false },
   { id: "balachao_250g", name: "চিংড়ি বালাচাও (250 গ্রাম)", price: 310, image: "assets/prodact_250.jpg", description: "বড় প্যাক, বড় স্বাদ। পরিবারের জন্য উপযুক্ত। ঘরে বসেই অর্ডার করুন।", features: ["ফ্রেশ ড্রাই চিংড়ি", "আসল মসলা", "ঝাঁজালো স্বাদ", "হোমমেড ফ্লেভার", "উন্নতমানের উপাদান"], freeDelivery: false }
 ];
@@ -33,6 +33,8 @@ const themeIconSun = document.getElementById('theme-icon-sun');
 const themeIconMoon = document.getElementById('theme-icon-moon');
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
+const searchBar = document.getElementById('search-bar');
+const mobileSearchBar = document.getElementById('mobile-search-bar');
 
 // --- Utility ---
 function showToast(title, description, variant = 'default') {
@@ -88,8 +90,12 @@ async function submitToGoogleSheet(data) {
 }
 
 // --- RENDER FUNCTIONS ---
-function renderProducts() {
-  productGrid.innerHTML = PRODUCTS.map(p => `
+function renderProducts(productsToRender) {
+  if (productsToRender.length === 0) {
+    productGrid.innerHTML = `<div class="col-span-full text-center py-16"><h3 class="text-2xl font-bold text-foreground">দুঃখিত!</h3><p class="text-muted-foreground mt-2">আপনার সার্চের সাথে মিলে এমন কোনো পণ্য পাওয়া যায়নি।</p></div>`;
+    return;
+  }
+  productGrid.innerHTML = productsToRender.map(p => `
   <div class="card-modern group cursor-pointer overflow-hidden animate-fade-in" data-product-id="${p.id}">
     <div class="p-0">
       <div class="relative overflow-hidden" data-action="preview">
@@ -184,14 +190,14 @@ function renderPreviewModal(product) {
 function renderOrderModal(product, quantity) {
   // This function remains the same as provided
   const productTotal = product.price * quantity;
-  return `<div class="modal-overlay hidden" id="order-modal"><div class="modal-content card-modern max-w-2xl w-full max-h-[90vh] overflow-y-auto m-4 rounded-lg"><div class="p-6 space-y-6"><h2 class="text-2xl font-bold text-gradient">অর্ডার কনফার্ম করুন</h2><div class="flex gap-4 p-4 bg-muted/30 rounded-lg"><img src="${product.image}" alt="${product.name}" class="w-20 h-20 object-cover rounded-lg" /><div class="flex-1"><h4 class="font-bold text-foreground">${product.name}</h4><p class="text-success font-bold">৳${product.price}</p></div></div><form id="single-order-form" class="space-y-4"><div class="space-y-2"><label class="text-sm font-medium">পরিমাণ</label><div class="flex items-center gap-3"><button type="button" id="single-qty-dec-btn" data-action="dec-single-qty" class="h-8 w-8 border rounded-md flex items-center justify-center">-</button><span id="quantity-value" class="w-12 text-center text-lg font-medium">${quantity}</span><button type="button" data-action="inc-single-qty" class="h-8 w-8 border rounded-md flex items-center justify-center">+</button><span id="product-subtotal" class="ml-4 text-sm text-muted-foreground">সাবটোটাল: ৳${productTotal}</span></div></div><hr/><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="space-y-2"><label for="customerName" class="text-sm font-medium">আপনার নাম *</label><input type="text" id="customerName" name="customerName" required minlength="3" placeholder="নাম লিখুন" class="w-full p-2 border rounded-md bg-input" /></div><div class="space-y-2"><label for="phoneNumber" class="text-sm font-medium">ফোন নম্বর *</label><input type="tel" id="phoneNumber" name="phoneNumber" required minlength="11" maxlength="14" pattern="^\\+?\\d{10,13}$" title="অনুগ্রহ করে + সহ বা ছাড়া ১১ থেকে ১৪ অক্ষরের একটি বৈধ ফোন নম্বর দিন।" placeholder="+88017xxxxxxxx" class="w-full p-2 border rounded-md bg-input" /></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div class="space-y-2"><label for="division" class="text-sm font-medium">বিভাগ *</label><select name="division" required class="w-full p-2 border rounded-md bg-input"><option value="" disabled selected>বিভাগ নির্বাচন করুন</option>${Object.keys(DIVISIONS_AND_DISTRICTS).map(div => `<option value="${div}">${div}</option>`).join('')}</select></div><div class="space-y-2"><label for="district" class="text-sm font-medium">জেলা *</label><select name="district" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে বিভাগ নির্বাচন করুন</option></select></div><div class="space-y-2"><label for="thana" class="text-sm font-medium">থানা/উপজেলা *</label><select name="thana" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে জেলা নির্বাচন করুন</option></select></div></div><div class="space-y-2"><label for="address" class="text-sm font-medium">বিস্তারিত ঠিকানা *</label><input type="text" id="address" name="address" required placeholder="বাড়ির নম্বর, রাস্তা, এলাকা/গ্রাম ইত্যাদি লিখুন" class="w-full p-2 border rounded-md bg-input" /></div><hr/><div class="space-y-2 p-4 bg-gradient-subtle rounded-lg"><div id="delivery-charge-row" class="flex justify-between text-sm" style="display: none;"><span>ডেলিভারি চার্জ:</span><span id="delivery-charge">৳0</span></div><hr/><div class="flex justify-between text-lg font-bold text-gradient"><span>মোট:</span><span id="total-amount">৳${productTotal}</span></div></div><button type="submit" class="w-full btn-primary text-lg py-3 rounded-md">অর্ডার কনফার্ম করুন</button></form></div></div></div>`;
+  return `<div class="modal-overlay hidden" id="order-modal"><div class="modal-content card-modern max-w-2xl w-full max-h-[90vh] overflow-y-auto m-4 rounded-lg"><div class="p-6 space-y-6"><h2 class="text-2xl font-bold text-gradient">অর্ডার কনফার্ম করুন</h2><div class="flex gap-4 p-4 bg-muted/30 rounded-lg"><img src="${product.image}" alt="${product.name}" class="w-20 h-20 object-cover rounded-lg" /><div class="flex-1"><h4 class="font-bold text-foreground">${product.name}</h4><p class="text-success font-bold">৳${product.price}</p></div></div><form id="single-order-form" class="space-y-4"><div class="space-y-2"><label class="text-sm font-medium">পরিমাণ</label><div class="flex items-center gap-3"><button type="button" id="single-qty-dec-btn" data-action="dec-single-qty" class="h-8 w-8 border rounded-md flex items-center justify-center">-</button><span id="quantity-value" class="w-12 text-center text-lg font-medium">${quantity}</span><button type="button" data-action="inc-single-qty" class="h-8 w-8 border rounded-md flex items-center justify-center">+</button><span id="product-subtotal" class="ml-4 text-sm text-muted-foreground">সাবটোটাল: ৳${productTotal}</span></div></div><hr/><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="space-y-2"><label for="customerName" class="text-sm font-medium">আপনার নাম *</label><input type="text" id="customerName" name="customerName" required minlength="3" placeholder="নাম লিখুন" class="w-full p-2 border rounded-md bg-input" /></div><div class="space-y-2"><label for="phoneNumber" class="text-sm font-medium">ফোন নম্বর *</label><input type="tel" id="phoneNumber" name="phoneNumber" required minlength="11" maxlength="14" pattern="^\\+?\\d{10,13}$" title="অনুগ্রহ করে + সহ বা ছাড়া 11 থেকে 14 অক্ষরের একটি বৈধ ফোন নম্বর দিন।" placeholder="+88017xxxxxxxx" class="w-full p-2 border rounded-md bg-input" /></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div class="space-y-2"><label for="division" class="text-sm font-medium">বিভাগ *</label><select name="division" required class="w-full p-2 border rounded-md bg-input"><option value="" disabled selected>বিভাগ নির্বাচন করুন</option>${Object.keys(DIVISIONS_AND_DISTRICTS).map(div => `<option value="${div}">${div}</option>`).join('')}</select></div><div class="space-y-2"><label for="district" class="text-sm font-medium">জেলা *</label><select name="district" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে বিভাগ নির্বাচন করুন</option></select></div><div class="space-y-2"><label for="thana" class="text-sm font-medium">থানা/উপজেলা *</label><select name="thana" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে জেলা নির্বাচন করুন</option></select></div></div><div class="space-y-2"><label for="address" class="text-sm font-medium">বিস্তারিত ঠিকানা *</label><input type="text" id="address" name="address" required placeholder="বাড়ির নম্বর, রাস্তা, এলাকা/গ্রাম ইত্যাদি লিখুন" class="w-full p-2 border rounded-md bg-input" /></div><hr/><div class="space-y-2 p-4 bg-gradient-subtle rounded-lg"><div id="delivery-charge-row" class="flex justify-between text-sm" style="display: none;"><span>ডেলিভারি চার্জ:</span><span id="delivery-charge">৳0</span></div><hr/><div class="flex justify-between text-lg font-bold text-gradient"><span>মোট:</span><span id="total-amount">৳${productTotal}</span></div></div><button type="submit" class="w-full btn-primary text-lg py-3 rounded-md">অর্ডার কনফার্ম করুন</button></form></div></div></div>`;
 }
 
 function renderCartModal() {
   // This function remains the same as provided
   const subtotal = CART.reduce((s, i) => s + i.price * i.quantity, 0);
   return `<div class="modal-overlay hidden" id="cart-modal"><div class="modal-content card-modern max-w-2xl w-full max-h-[90vh] overflow-y-auto m-4 rounded-lg"><div class="p-6 space-y-6"><h2 class="text-2xl font-bold text-gradient">আপনার শপিং কার্ট</h2>${CART.length === 0 ? `<div class="text-center py-12"><h3 class="text-lg font-medium text-foreground mb-2">আপনার কার্ট খালি</h3><p class="text-muted-foreground">কেনাকাটা শুরু করতে পণ্য যোগ করুন</p></div>` :
-      `<div class="space-y-4">${CART.map(i => `<div class="flex items-center justify-between p-4 bg-muted/30 rounded-lg" data-item-id="${i.id}"><div class="flex-1"><h4 class="font-medium text-foreground">${i.name}</h4><p class="text-sm text-muted-foreground">৳${i.price} প্রতিটি</p></div><div class="flex items-center gap-3"><div class="flex items-center gap-2"><button data-action="dec-qty" class="h-8 w-8 border rounded-md flex items-center justify-center">-</button><span id="item-qty" class="w-8 text-center font-medium">${i.quantity}</span><button data-action="inc-qty" class="h-8 w-8 border rounded-md flex items-center justify-center">+</button></div><div class="w-20 text-right"><span id="item-total" class="font-bold">৳${i.price * i.quantity}</span></div><button data-action="remove-item" class="h-8 w-8 text-destructive hover:text-destructive flex items-center justify-center">🗑️</button></div></div>`).join('')}</div><hr/><form id="cart-order-form" class="space-y-4"><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="space-y-2"><label for="customerName" class="text-sm font-medium">আপনার নাম *</label><input type="text" id="customerName" name="customerName" required minlength="3" placeholder="নাম লিখুন" class="w-full p-2 border rounded-md bg-input" /></div><div class="space-y-2"><label for="phoneNumber" class="text-sm font-medium">ফোন নম্বর *</label><input type="tel" id="phoneNumber" name="phoneNumber" required minlength="11" maxlength="14" pattern="^\\+?\\d{10,13}$" title="অনুগ্রহ করে + সহ বা ছাড়া ১১ থেকে ১৪ অক্ষরের একটি বৈধ ফোন নম্বর দিন।" placeholder="+88017xxxxxxxx" class="w-full p-2 border rounded-md bg-input" /></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div class="space-y-2"><label for="division" class="text-sm font-medium">বিভাগ *</label><select name="division" required class="w-full p-2 border rounded-md bg-input"><option value="" disabled selected>বিভাগ নির্বাচন করুন</option>${Object.keys(DIVISIONS_AND_DISTRICTS).map(div => `<option value="${div}">${div}</option>`).join('')}</select></div><div class="space-y-2"><label for="district" class="text-sm font-medium">জেলা *</label><select name="district" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে বিভাগ নির্বাচন করুন</option></select></div><div class="space-y-2"><label for="thana" class="text-sm font-medium">থানা/উপজেলা *</label><select name="thana" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে জেলা নির্বাচন করুন</option></select></div></div><div class="space-y-2"><label for="address" class="text-sm font-medium">বিস্তারিত ঠিকানা *</label><input type="text" id="address" name="address" required placeholder="বাড়ির নম্বর, রাস্তা, এলাকা/গ্রাম ইত্যাদি লিখুন" class="w-full p-2 border rounded-md bg-input" /></div><hr/><div class="space-y-2 p-4 bg-gradient-subtle rounded-lg"><div class="flex justify-between text-sm"><span>সাবটোটাল:</span><span id="cart-subtotal">৳${subtotal}</span></div><div id="delivery-charge-row" class="flex justify-between text-sm" style="display: none;"><span>ডেলিভারি চার্জ:</span><span id="delivery-charge">৳0</span></div><hr/><div class="flex justify-between text-lg font-bold text-gradient"><span>মোট:</span><span id="total-amount">৳${subtotal}</span></div></div><button type="submit" class="w-full btn-primary text-lg py-3 rounded-md">অর্ডার কনফার্ম করুন</button></form></div>`}</div></div>`;
+      `<div class="space-y-4">${CART.map(i => `<div class="flex items-center justify-between p-4 bg-muted/30 rounded-lg" data-item-id="${i.id}"><div class="flex-1"><h4 class="font-medium text-foreground">${i.name}</h4><p class="text-sm text-muted-foreground">৳${i.price} প্রতিটি</p></div><div class="flex items-center gap-3"><div class="flex items-center gap-2"><button data-action="dec-qty" class="h-8 w-8 border rounded-md flex items-center justify-center">-</button><span id="item-qty" class="w-8 text-center font-medium">${i.quantity}</span><button data-action="inc-qty" class="h-8 w-8 border rounded-md flex items-center justify-center">+</button></div><div class="w-20 text-right"><span id="item-total" class="font-bold">৳${i.price * i.quantity}</span></div><button data-action="remove-item" class="h-8 w-8 text-destructive hover:text-destructive flex items-center justify-center">🗑️</button></div></div>`).join('')}</div><hr/><form id="cart-order-form" class="space-y-4"><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="space-y-2"><label for="customerName" class="text-sm font-medium">আপনার নাম *</label><input type="text" id="customerName" name="customerName" required minlength="3" placeholder="নাম লিখুন" class="w-full p-2 border rounded-md bg-input" /></div><div class="space-y-2"><label for="phoneNumber" class="text-sm font-medium">ফোন নম্বর *</label><input type="tel" id="phoneNumber" name="phoneNumber" required minlength="11" maxlength="14" pattern="^\\+?\\d{10,13}$" title="অনুগ্রহ করে + সহ বা ছাড়া 11 থেকে 14 অক্ষরের একটি বৈধ ফোন নম্বর দিন।" placeholder="+88017xxxxxxxx" class="w-full p-2 border rounded-md bg-input" /></div></div><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div class="space-y-2"><label for="division" class="text-sm font-medium">বিভাগ *</label><select name="division" required class="w-full p-2 border rounded-md bg-input"><option value="" disabled selected>বিভাগ নির্বাচন করুন</option>${Object.keys(DIVISIONS_AND_DISTRICTS).map(div => `<option value="${div}">${div}</option>`).join('')}</select></div><div class="space-y-2"><label for="district" class="text-sm font-medium">জেলা *</label><select name="district" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে বিভাগ নির্বাচন করুন</option></select></div><div class="space-y-2"><label for="thana" class="text-sm font-medium">থানা/উপজেলা *</label><select name="thana" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে জেলা নির্বাচন করুন</option></select></div></div><div class="space-y-2"><label for="address" class="text-sm font-medium">বিস্তারিত ঠিকানা *</label><input type="text" id="address" name="address" required placeholder="বাড়ির নম্বর, রাস্তা, এলাকা/গ্রাম ইত্যাদি লিখুন" class="w-full p-2 border rounded-md bg-input" /></div><hr/><div class="space-y-2 p-4 bg-gradient-subtle rounded-lg"><div class="flex justify-between text-sm"><span>সাবটোটাল:</span><span id="cart-subtotal">৳${subtotal}</span></div><div id="delivery-charge-row" class="flex justify-between text-sm" style="display: none;"><span>ডেলিভারি চার্জ:</span><span id="delivery-charge">৳0</span></div><hr/><div class="flex justify-between text-lg font-bold text-gradient"><span>মোট:</span><span id="total-amount">৳${subtotal}</span></div></div><button type="submit" class="w-full btn-primary text-lg py-3 rounded-md">অর্ডার কনফার্ম করুন</button></form></div>`}</div></div>`;
 }
 
 function getThankYouModalHTML() {
@@ -229,7 +235,6 @@ offerGrid.addEventListener('click', handleGridClick);
 cartBtn.addEventListener('click', () => { openModal(renderCartModal()); });
 
 async function handleFormSubmission(form, modal, type) {
-    // This function remains the same as provided
     const submitBtn = form.querySelector('button[type="submit"]');
     if (!form.checkValidity() || !form.division.value || !form.district.value || !form.thana.value) {
         showToast("ত্রুটি", "দয়া করে ফর্মের সমস্ত তথ্য সঠিকভাবে পূরণ করুন।", "destructive");
@@ -262,7 +267,6 @@ async function handleFormSubmission(form, modal, type) {
 }
 
 modalsContainer.addEventListener('change', e => {
-    // This function remains the same as provided
     const form = e.target.closest('form');
     if (!form) return;
     const formType = form.id.startsWith('cart') ? 'cart' : 'single';
@@ -293,7 +297,6 @@ modalsContainer.addEventListener('change', e => {
 });
 
 modalsContainer.addEventListener('click', async e => {
-  // This function remains the same as provided
   const modal = e.target.closest('.modal-overlay');
   if (!modal) return;
   if (e.target === modal) closeModal(modal);
@@ -345,7 +348,6 @@ modalsContainer.addEventListener('click', async e => {
 });
 
 function updatePriceSummary(form, type) {
-    // This function remains the same as provided
     if (!form) return;
     const selectedDistrict = form.querySelector('select[name="district"]').value;
     let deliveryCharge = 0, subtotal, isFreeDelivery = false;
@@ -368,6 +370,32 @@ function updatePriceSummary(form, type) {
     form.querySelector('#delivery-charge-row').style.display = selectedDistrict || isFreeDelivery ? 'flex' : 'none';
 }
 
+// --- NEW SEARCH LOGIC ---
+function handleSearch(event) {
+    const searchTerm = event.target.value.trim().toLowerCase();
+    
+    // Sync search bars
+    if(event.target.id === 'search-bar') {
+        mobileSearchBar.value = event.target.value;
+    } else {
+        searchBar.value = event.target.value;
+    }
+
+    if (searchTerm === '') {
+        renderProducts(PRODUCTS);
+        return;
+    }
+    const filteredProducts = PRODUCTS.filter(product =>
+        product.name.toLowerCase().includes(searchTerm) ||
+        product.description.toLowerCase().includes(searchTerm)
+    );
+    renderProducts(filteredProducts);
+}
+
+searchBar.addEventListener('input', handleSearch);
+mobileSearchBar.addEventListener('input', handleSearch);
+
+
 // --- NEW THEME & UI LOGIC ---
 function updateTheme() {
   const isDark = document.documentElement.classList.contains('dark');
@@ -389,7 +417,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Close mobile menu on link click
             if (!mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
             }
@@ -399,8 +426,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // --- INIT ---
 function initializeApp() {
-    renderProducts();
-    renderOffers(); // Render the new offer section
+    renderProducts(PRODUCTS);
+    renderOffers();
     updateTheme();
     updateCartCount();
 }
