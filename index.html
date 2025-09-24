@@ -56,21 +56,25 @@
   <div class="fixed inset-0 opacity-5 pointer-events-none bg-dots-pattern"></div>
   
   <div id="app-root">
-    <header class="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-elegant">
+    <header id="main-header" class="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-elegant transition-all duration-300">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
           <a href="#" class="flex items-center gap-3">
-            <img src="assets/logo_3.jpg" alt="সবকিছু.com Logo" class="w-14 h-14 rounded-full shadow-elegant float-animation" />
+            <img src="assets/logo_3.jpg" alt="সবকিছু.com Logo" class="w-14 h-14 rounded-full shadow-elegant" style="animation: float 3s ease-in-out infinite;" />
             <div class="hidden sm:block">
               <h1 class="text-2xl font-bold text-gradient">সবকিছু.com</h1>
               <p class="text-sm text-muted-foreground -mt-1">এক ক্লিকে সবকিছু।</p>
             </div>
           </a>
           
-          <!-- Search Bar (Desktop) -->
           <div class="relative flex-1 hidden lg:flex justify-center px-8">
-              <input type="search" id="search-bar" placeholder="পণ্য খুঁজুন..." class="w-full max-w-lg pl-10 pr-4 py-2 border rounded-full bg-input text-foreground focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all">
+            <button id="desktop-search-icon" class="p-2 rounded-full hover:bg-accent hover:text-primary transition-colors">
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <div id="desktop-search-container" class="absolute inset-y-0 w-full max-w-lg transition-all duration-300 transform scale-x-0 opacity-0 origin-center">
+              <input type="search" id="search-bar" placeholder="পণ্য খুঁজুন (e.g., balachao 500g)" class="w-full pl-10 pr-4 py-2 border rounded-full bg-input text-foreground focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all">
               <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
           </div>
 
           <div class="flex items-center gap-2">
@@ -82,7 +86,7 @@
             </nav>
             <button id="cart-btn" class="relative p-2 rounded-full hover:bg-accent hover:text-primary transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-              <span id="cart-item-count" class="absolute -top-1 -right-1 bg-secondary text-secondary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-scale-in hidden">0</span>
+              <span id="cart-item-count" class="absolute -top-1 -right-1 bg-secondary text-secondary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden" style="animation: scale-in 0.3s ease-out;">0</span>
             </button>
             <button id="theme-toggle-btn" class="p-2 rounded-full hover:bg-accent hover:text-primary transition-colors">
               <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -94,21 +98,17 @@
           </div>
         </div>
         <div id="mobile-menu" class="hidden lg:hidden py-4 border-t border-border">
-          <!-- Search Bar (Mobile) -->
           <div class="px-4 mb-4">
-              <div class="relative">
-                  <input type="search" id="mobile-search-bar" placeholder="পণ্য খুঁজুন..." class="w-full pl-10 pr-4 py-2 border rounded-full bg-input text-foreground focus:ring-primary focus:border-primary transition-all duration-300" />
-                  <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-              </div>
+            <div class="relative">
+              <input type="search" id="mobile-search-bar" placeholder="পণ্য খুঁজুন..." class="w-full pl-10 pr-4 py-2 border rounded-full bg-input text-foreground focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all">
+              <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </div>
           </div>
-          <nav class="flex flex-col gap-4 px-4">
-            <a href="#home" class="nav-link">হোম</a>
-            <a href="#products" class="nav-link">পণ্যসমূহ</a>
-            <a href="#offers" class="nav-link">অফার</a>
-            <a href="#about" class="nav-link">আমাদের সম্পর্কে</a>
-            <a href="#reviews" class="nav-link">রিভিউ</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-            <a href="#contact" class="nav-link">যোগাযোগ</a>
+          <nav class="flex flex-col items-start gap-3 px-4">
+            <a href="#home" class="nav-link w-full">হোম</a>
+            <a href="#products" class="nav-link w-full">পণ্যসমূহ</a>
+            <a href="#about" class="nav-link w-full">আমাদের সম্পর্কে</a>
+            <a href="#contact" class="nav-link w-full">যোগাযোগ</a>
           </nav>
         </div>
       </div>
@@ -117,23 +117,12 @@
     <main>
       <section id="home" class="relative min-h-[60vh] md:min-h-[80vh] flex items-center justify-center text-center text-white overflow-hidden">
         <div class="absolute inset-0 bg-black/60 z-10"></div>
-        <img src="assets/banner.jpg" alt="চিংড়ি বালাচাও ব্যানার" class="absolute inset-0 w-full h-full object-cover animate-zoom">
-        <div class="relative z-20 p-4 animate-fade-in">
-          <span class="inline-block bg-secondary text-secondary-foreground mb-6 px-8 py-3 text-lg font-medium rounded-lg animate-scale-in">স্বাগতম</span>
-          <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-slide-up text-shadow">সবকিছু.com</h1>
-          <p class="text-xl md:text-2xl mb-8 animate-fade-in text-shadow-subtle">এক ক্লিকে সবকিছু। 🛒</p>
+        <img src="assets/banner.jpg" alt="চিংড়ি বালাচাও ব্যানার" class="absolute inset-0 w-full h-full object-cover" style="animation: zoom 20s ease-in-out infinite alternate;">
+        <div class="relative z-20 p-4" style="animation: fade-in 0.5s ease-out;">
+          <span class="inline-block bg-secondary text-secondary-foreground mb-6 px-8 py-3 text-lg font-medium rounded-lg" style="animation: scale-in 0.3s ease-out;">স্বাগতম</span>
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 text-shadow" style="animation: slide-up 0.4s ease-out;">সবকিছু.com</h1>
+          <p class="text-xl md:text-2xl mb-8 text-shadow-subtle" style="animation: fade-in 0.5s ease-out;">এক ক্লিকে সবকিছু। 🛒</p>
           <a href="#products" class="btn-primary text-lg font-bold py-3 px-8 rounded-lg transition-transform hover:scale-105">পণ্য গুলো দেখুন</a>
-        </div>
-      </section>
-
-      <section id="products" class="py-16 lg:py-24 bg-gradient-subtle">
-        <div class="container mx-auto px-4">
-          <div class="text-center mb-12">
-            <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">📦 আমাদের পণ্যসমূহ 📦</span>
-            <h2 class="text-4xl font-bold text-gradient">আপনার পছন্দের সেরা বালাচাও</h2>
-          </div>
-          <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            </div>
         </div>
       </section>
 
@@ -149,7 +138,18 @@
         </div>
       </section>
 
-      <section id="about" class="py-16 lg:py-24 bg-gradient-subtle">
+      <section id="products" class="py-16 lg:py-24 bg-gradient-subtle">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">📦 আমাদের পণ্যসমূহ 📦</span>
+            <h2 class="text-4xl font-bold text-gradient">আপনার পছন্দের সেরা বালাচাও</h2>
+          </div>
+          <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+        </div>
+      </section>
+      
+      <section id="about" class="py-16 lg:py-24">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">আমাদের সম্পর্কে</span>
@@ -170,24 +170,17 @@
                             <div class="flex items-start gap-3"><div class="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center mt-0.5 shrink-0"><span class="text-success">✓</span></div><span class="text-foreground leading-relaxed">সহজ অর্ডার প্রক্রিয়া, দ্রুত ডেলিভারি</span></div>
                         </div>
                     </div>
-                    <div class="p-6 card-modern">
-                        <p class="text-foreground leading-relaxed"><strong>সবকিছু.com</strong>-এর মূল লক্ষ্য — আধুনিক প্রযুক্তিকে কাজে লাগিয়ে মানুষের জীবনকে সহজ করা। আমরা চাই, আপনার কেনাকাটা হোক ঝামেলাহীন, নিরাপদ ও আনন্দদায়ক।</p>
-                    </div>
-                    <div class="text-center p-6 bg-gradient-primary text-primary-foreground rounded-xl shadow-lg">
-                        <p class="text-xl font-bold">👉 কারণ, 'যা দরকার, তাই পাবেন – সবকিছু.com'</p>
-                    </div>
                 </div>
                 <div class="space-y-6">
-                    <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"><span class="text-primary">🛡️</span></div><div class="space-y-1"><h4 class="text-lg font-bold text-foreground">গুণমান নিশ্চয়তা</h4><p class="text-muted-foreground leading-relaxed">প্রতিটি পণ্য কঠোর মান নিয়ন্ত্রণের মধ্য দিয়ে পরীক্ষিত।</p></div></div></div></div>
-                    <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"><span class="text-primary">🔐</span></div><div class="space-y-1"><h4 class="text-lg font-bold text-foreground">নিরাপদ কেনাকাটা</h4><p class="text-muted-foreground leading-relaxed">সুরক্ষিত পেমেন্ট ও ব্যক্তিগত তথ্যের গোপনীয়তা।</p></div></div></div></div>
-                    <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"><span class="text-primary">🚚</span></div><div class="space-y-1"><h4 class="text-lg font-bold text-foreground">দ্রুত ডেলিভারি</h4><p class="text-muted-foreground leading-relaxed">সারা বাংলাদেশে দ্রুততম ডেলিভারি সেবা।</p></div></div></div></div>
+                    <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"><span class="text-primary text-2xl font-bold">🛡️</span></div><div class="space-y-1"><h4 class="text-lg font-bold text-foreground">গুণমান নিশ্চয়তা</h4><p class="text-muted-foreground leading-relaxed">প্রতিটি পণ্য কঠোর মান নিয়ন্ত্রণের মধ্য দিয়ে পরীক্ষিত।</p></div></div></div></div>
+                    <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0"><span class="text-primary text-2xl font-bold">🚚</span></div><div class="space-y-1"><h4 class="text-lg font-bold text-foreground">দ্রুত ডেলিভারি</h4><p class="text-muted-foreground leading-relaxed">সারা বাংলাদেশে দ্রুততম ডেলিভারি সেবা।</p></div></div></div></div>
                     <div class="card-modern bg-gradient-secondary text-secondary-foreground"><div class="p-6"><div class="grid grid-cols-2 gap-6 text-center"><div><div class="text-2xl font-bold">500+</div><div class="text-sm opacity-90">সন্তুষ্ট গ্রাহক</div></div><div><div class="text-2xl font-bold">98%</div><div class="text-sm opacity-90">পণ্যের গুণমান</div></div></div></div></div>
                 </div>
             </div>
         </div>
       </section>
 
-      <section id="reviews" class="py-16 lg:py-24">
+      <section id="reviews" class="py-16 lg:py-24 bg-gradient-subtle">
         <div class="container mx-auto px-4">
           <div class="text-center mb-12">
             <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">💬 গ্রাহক রিভিউ 💬</span>
@@ -207,7 +200,7 @@
               <p class="text-muted-foreground italic">"অর্ডার করার 2 দিনের মধ্যেই ডেলিভারি পেয়েছি। প্যাকেজিংও খুব ভালো ছিল। ধন্যবাদ সবকিছু.com। "</p>
             </div>
             <div class="card-modern p-6 text-center">
-              <img src="assets/male3.png" alt="সাকিব আল হাসান" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary/50">
+              <img src="assets/male3.png" alt="সাকিব রহমান" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-primary/50">
               <h4 class="font-bold text-lg">সাকিব রহমান</h4>
               <div class="flex justify-center my-2 text-yellow-400">★★★★★</div>
               <p class="text-muted-foreground italic">"ফ্রি ডেলিভারি অফারটা দারুণ ছিল। স্বাদ আর সার্ভিসে আমি মুগ্ধ। বন্ধুদেরও রিকমেন্ড করেছি।"</p>
@@ -216,7 +209,7 @@
         </div>
       </section>
 
-      <section id="faq" class="py-16 lg:py-24 bg-gradient-subtle">
+      <section id="faq" class="py-16 lg:py-24">
         <div class="container mx-auto px-4 max-w-4xl">
           <div class="text-center mb-12">
             <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">❓ প্রশ্নাবলী ❓</span>
@@ -242,9 +235,8 @@
           </div>
         </div>
       </section>
-
-      <!-- Partners Section Restored -->
-      <section class="py-16">
+      
+      <section id="partners" class="py-16 bg-gradient-subtle">
         <div class="container mx-auto px-4">
           <div class="text-center mb-12">
             <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">🤝 আমাদের পার্টনার 🤝</span>
@@ -298,28 +290,28 @@
       </section>
     </main>
 
-    <footer class="bg-gradient-subtle border-t border-border mt-16">
-      <div class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="space-y-4 col-span-1 md:col-span-2 lg:col-span-1">
-            <h3 class="text-2xl font-bold text-gradient">সবকিছু.com</h3>
-            <p class="text-muted-foreground leading-relaxed">বাংলাদেশের সেরা অনলাইন শপিং প্ল্যাটফর্ম। এক ক্লিকেই পাবেন সব প্রয়োজনীয় পণ্য।</p>
+    <footer class="bg-card/95 backdrop-blur-md py-12 border-t border-border mt-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div class="space-y-4">
+            <h4 class="text-lg font-bold text-foreground">আমাদের সম্পর্কে</h4>
+            <p class="text-muted-foreground text-sm">
+              সবকিছু.com আপনাকে সেরা অনলাইন শপিংয়ের অভিজ্ঞতা দিতে প্রতিশ্রুতিবদ্ধ।
+            </p>
           </div>
           <div class="space-y-4">
             <h4 class="text-lg font-bold text-foreground">গুরুত্বপূর্ণ লিংক</h4>
-            <nav class="flex flex-col gap-2">
-              <a href="#home" class="footer-link">হোম</a>
-              <a href="#products" class="footer-link">পণ্যসমূহ</a>
-              <a href="#about" class="footer-link">আমাদের সম্পর্কে</a>
-              <a href="#" class="footer-link">Privacy Policy</a>
-              <a href="#" class="footer-link">Terms & Conditions</a>
-            </nav>
+            <ul class="space-y-2 text-sm">
+              <li><a href="#home" class="footer-link">হোম</a></li>
+              <li><a href="#products" class="footer-link">পণ্যসমূহ</a></li>
+              <li><a href="#about" class="footer-link">আমাদের সম্পর্কে</a></li>
+              <li><a href="#contact" class="footer-link">যোগাযোগ</a></li>
+            </ul>
           </div>
           <div class="space-y-4">
-            <h4 class="text-lg font-bold text-foreground">যোগাযোগ করুন</h4>
+            <h4 class="text-lg font-bold text-foreground">যোগাযোগ</h4>
             <div class="space-y-3">
               <div class="flex items-center gap-3"><span class="text-primary">📧</span><a href="mailto:shobkichuofficial@gmail.com" class="footer-link">shobkichuofficial@gmail.com</a></div>
-              <div class="flex items-center gap-3"><span class="text-primary">📞</span><span class="text-muted-foreground">+8809638180218</span></div>
               <div class="flex items-center gap-3"><span class="text-primary">📍</span><span class="text-muted-foreground">বাংলাদেশ</span></div>
             </div>
           </div>
