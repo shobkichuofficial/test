@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>প্রোডাক্টের বিবরণ - সবকিছু.com</title> 
-  <meta name="description" content="সবকিছু.com থেকে সেরা মানের চিংড়ি বালাচাও কিনুন আকর্ষণীয় অফারে।" />
+  <title>আমাদের পার্টনার - সবকিছু.com</title>
+  <meta name="description" content="সবকিছু.com - এর সম্মানিত পার্টনারদের সম্পর্কে জানুন।" />
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -48,21 +48,18 @@
     <header id="main-header" class="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-elegant">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
-          <a href="index.html" class="flex items-center gap-3"> <img src="assets/logo_3.jpg" alt="সবকিছু.com Logo" class="w-14 h-14 rounded-full shadow-elegant" />
+          <a href="index.html" class="flex items-center gap-3">
+            <img src="assets/logo_3.jpg" alt="সবকিছু.com Logo" class="w-14 h-14 rounded-full shadow-elegant" />
             <div class="hidden sm:block">
               <h1 class="text-2xl font-bold text-gradient">সবকিছু.com</h1>
               <p class="text-sm text-muted-foreground -mt-1">এক ক্লিকে সবকিছু।</p>
             </div>
           </a>
-          
           <div class="flex items-center gap-2">
             <nav class="hidden lg:flex items-center gap-6">
               <a href="index.html" class="nav-link">হোম</a>
-              <a href="index.html#products" class="nav-link">পণ্যসমূহ</a>
-              <a href="index.html#offers" class="nav-link">বিশেষ অফার</a>
-              <a href="reviews.html" class="nav-link">রিভিউ</a>
-              <a href="partners.html" class="nav-link">পার্টনার</a>
               <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
+              <a href="partners.html" class="nav-link">পার্টনার</a>
               <a href="contact.html" class="nav-link">যোগাযোগ</a>
             </nav>
             <button id="cart-btn" class="relative p-2 rounded-full hover:bg-accent hover:text-primary transition-colors">
@@ -79,10 +76,25 @@
     </header>
 
     <main class="py-12 md:py-20">
-      <div class="container mx-auto px-4">
-        <div id="product-details-container" class="max-w-5xl mx-auto">
+      <section class="py-16 animate-fade-in">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center mb-12">
+            <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">🤝 আমাদের পার্টনার 🤝</span>
+            <h2 class="text-4xl font-bold text-gradient">যাদের পেয়ে আমরা গর্বিত</h2>
+            <p class="text-muted-foreground mt-4 max-w-2xl mx-auto">আমরা গর্বিতভাবে Suddho Deal-এর সাথে পার্টনারশিপ করেছি আপনাদের কাছে সেরা মানের পণ্য পৌঁছে দেওয়ার জন্য।</p>
           </div>
-      </div>
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-12 md:gap-20">
+            <div class="text-center">
+              <img src="assets/logo_3.jpg" alt="সবকিছু.com Logo" class="h-28 w-28 mx-auto rounded-full object-contain shadow-elegant transition-transform duration-300 hover:scale-110" />
+              <p class="mt-4 font-bold text-xl text-foreground">সবকিছু.com</p>
+            </div>
+            <div class="text-center">
+              <img src="assets/suddhodeal.jpg" alt="Suddho Deal Logo" class="h-28 w-28 mx-auto rounded-full object-contain shadow-elegant transition-transform duration-300 hover:scale-110" />
+              <p class="mt-4 font-bold text-xl text-foreground">Suddho Deal</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-card/95 backdrop-blur-md py-8 border-t border-border mt-16">
@@ -99,5 +111,5 @@
   </div>
 
   <script src="script.js"></script>
-  </body>
+</body>
 </html>

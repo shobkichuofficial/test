@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>প্রোডাক্টের বিবরণ - সবকিছু.com</title> 
-  <meta name="description" content="সবকিছু.com থেকে সেরা মানের চিংড়ি বালাচাও কিনুন আকর্ষণীয় অফারে।" />
+  <title>চেকআউট - সবকিছু.com</title>
+  <meta name="description" content="আপনার অর্ডারটি সম্পন্ন করুন। সবকিছু.com-এ আপনার কেনাকাটার চূড়ান্ত ধাপ।" />
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -29,11 +29,8 @@
           backgroundImage: { 'gradient-primary': 'var(--gradient-primary)', 'gradient-secondary': 'var(--gradient-secondary)', 'gradient-subtle': 'var(--gradient-subtle)' },
           boxShadow: { 'glow': 'var(--shadow-glow)', 'elegant': 'var(--shadow-elegant)' },
           borderRadius: { lg: "var(--radius)", md: "calc(var(--radius) - 2px)", sm: "calc(var(--radius) - 4px)" },
-          keyframes: {
-            "fade-in": { "0%": { opacity: "0", transform: "translateY(20px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
-            "scale-in": { "0%": { transform: "scale(0.95)", opacity: "0" }, "100%": { transform: "scale(1)", opacity: "1" } },
-          },
-          animation: { "fade-in": "fade-in 0.5s ease-out", "scale-in": "scale-in 0.3s ease-out" },
+          keyframes: { "fade-in": { "0%": { opacity: "0", transform: "translateY(20px)" }, "100%": { opacity: "1", transform: "translateY(0)" } } },
+          animation: { "fade-in": "fade-in 0.5s ease-out" },
         },
       },
     };
@@ -41,27 +38,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-screen bg-background relative overflow-x-hidden font-hind">
-  
   <div class="fixed inset-0 opacity-5 pointer-events-none bg-dots-pattern"></div>
-  
   <div id="app-root">
     <header id="main-header" class="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-elegant">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-between h-20">
-          <a href="index.html" class="flex items-center gap-3"> <img src="assets/logo_3.jpg" alt="সবকিছু.com Logo" class="w-14 h-14 rounded-full shadow-elegant" />
+          <a href="index.html" class="flex items-center gap-3">
+            <img src="assets/logo_3.jpg" alt="সবকিছু.com Logo" class="w-14 h-14 rounded-full shadow-elegant" />
             <div class="hidden sm:block">
               <h1 class="text-2xl font-bold text-gradient">সবকিছু.com</h1>
               <p class="text-sm text-muted-foreground -mt-1">এক ক্লিকে সবকিছু।</p>
             </div>
           </a>
-          
           <div class="flex items-center gap-2">
             <nav class="hidden lg:flex items-center gap-6">
               <a href="index.html" class="nav-link">হোম</a>
-              <a href="index.html#products" class="nav-link">পণ্যসমূহ</a>
-              <a href="index.html#offers" class="nav-link">বিশেষ অফার</a>
-              <a href="reviews.html" class="nav-link">রিভিউ</a>
-              <a href="partners.html" class="nav-link">পার্টনার</a>
               <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
               <a href="contact.html" class="nav-link">যোগাযোগ</a>
             </nav>
@@ -78,14 +69,42 @@
       </div>
     </header>
 
-    <main class="py-12 md:py-20">
-      <div class="container mx-auto px-4">
-        <div id="product-details-container" class="max-w-5xl mx-auto">
-          </div>
-      </div>
+    <main class="py-12 md:py-20 animate-fade-in">
+        <div id="checkout-container" class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gradient">চেকআউট</h1>
+                <p class="text-muted-foreground mt-2">আপনার অর্ডারটি সম্পন্ন করতে প্রয়োজনীয় তথ্য দিন।</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+                <div class="lg:col-span-3">
+                    <div class="card-modern p-8">
+                        <form id="checkout-form" class="space-y-6">
+                            <h3 class="text-2xl font-bold text-gradient mb-6">বিলিং তথ্য</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-2"><label for="customerName" class="text-sm font-medium">আপনার নাম *</label><input type="text" id="customerName" name="customerName" required minlength="3" placeholder="সম্পূর্ণ নাম" class="w-full p-2 border rounded-md bg-input" /></div>
+                                
+                                <div class="space-y-2"><label for="phoneNumber" class="text-sm font-medium">ফোন নম্বর *</label><input type="tel" id="phoneNumber" name="phoneNumber" required minlength="11" maxlength="15" pattern="^(\+880|880|0)?[1-9]{1}\d{9}$" placeholder="+8801..." class="w-full p-2 border rounded-md bg-input" /></div>
+                                </div>
+                            <h3 class="text-xl font-bold text-gradient pt-4">ডেলিভারি ঠিকানা</h3>
+                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="space-y-2"><label for="division" class="text-sm font-medium">বিভাগ *</label><select name="division" required class="w-full p-2 border rounded-md bg-input"><option value="" disabled selected>বিভাগ নির্বাচন করুন</option></select></div>
+                                <div class="space-y-2"><label for="district" class="text-sm font-medium">জেলা *</label><select name="district" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে বিভাগ নির্বাচন করুন</option></select></div>
+                                <div class="space-y-2"><label for="thana" class="text-sm font-medium">থানা/উপজেলা *</label><select name="thana" required class="w-full p-2 border rounded-md bg-input" disabled><option value="" disabled selected>আগে জেলা নির্বাচন করুন</option></select></div>
+                            </div>
+                            <div class="space-y-2"><label for="address" class="text-sm font-medium">বিস্তারিত ঠিকানা *</label><input type="text" id="address" name="address" required placeholder="বাড়ির নম্বর, রাস্তা, এলাকা/গ্রাম" class="w-full p-2 border rounded-md bg-input" /></div>
+                            <button type="submit" class="w-full btn-primary text-lg py-3 rounded-md mt-6">অর্ডার কনফার্ম করুন</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="lg:col-span-2">
+                    <div id="order-summary" class="card-modern p-8 sticky top-28">
+                         </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer class="bg-card/95 backdrop-blur-md py-8 border-t border-border mt-16">
+    <footer class="bg-card/95 backdrop-blur-md py-12 border-t border-border mt-16">
         <div class="container mx-auto px-4 text-center text-sm text-muted-foreground">
             <p>&copy; 2024 সবকিছু.com. সকল অধিকার সংরক্ষিত।</p>
         </div>
@@ -93,11 +112,7 @@
   </div>
 
   <div id="modals-container"></div>
-  <div id="toast" class="toast">
-    <div class="font-bold" id="toast-title"></div>
-    <div id="toast-description"></div>
-  </div>
-
+  <div id="toast" class="toast"><div class="font-bold" id="toast-title"></div><div id="toast-description"></div></div>
   <script src="script.js"></script>
-  </body>
+</body>
 </html>
