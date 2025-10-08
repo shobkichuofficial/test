@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="bn" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>আমাদের সম্পর্কে - সবকিছু.com</title>
+  <meta name="description" content="সবকিছু.com - এর লক্ষ্য, বৈশিষ্ট্য এবং আমাদের পরিচয় সম্পর্কে জানুন।" />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: { 'hind': ['Hind Siliguri', 'sans-serif'], },
+          colors: {
+            border: "hsl(var(--border))", input: "hsl(var(--input))", ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))", foreground: "hsl(var(--foreground))",
+            primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))", glow: "hsl(var(--primary-glow))" },
+            secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+            destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+            muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+            accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+            popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
+            card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+            success: { DEFAULT: "hsl(var(--success))", foreground: "hsl(var(--success-foreground))" },
+            warning: { DEFAULT: "hsl(var(--warning))", foreground: "hsl(var(--warning-foreground))" },
+          },
+          backgroundImage: { 'gradient-primary': 'var(--gradient-primary)', 'gradient-secondary': 'var(--gradient-secondary)', 'gradient-subtle': 'var(--gradient-subtle)' },
+          boxShadow: { 'glow': 'var(--shadow-glow)', 'elegant': 'var(--shadow-elegant)' },
+          borderRadius: { lg: "var(--radius)", md: "calc(var(--radius) - 2px)", sm: "calc(var(--radius) - 4px)" },
+          keyframes: {
+            "fade-in": { "0%": { opacity: "0", transform: "translateY(20px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
+            "scale-in": { "0%": { transform: "scale(0.95)", opacity: "0" }, "100%": { transform: "scale(1)", opacity: "1" } },
+          },
+          animation: { "fade-in": "fade-in 0.5s ease-out", "scale-in": "scale-in 0.3s ease-out" },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen bg-background relative overflow-x-hidden font-hind">
+  
+  <div class="fixed inset-0 opacity-5 pointer-events-none bg-dots-pattern"></div>
+  
+  <div id="app-root">
+    <header id="main-header" class="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-elegant">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-20">
+          <a href="index.html" class="flex items-center gap-3">
+            <img src="assets/logo_3.jpg" alt="সবকিছু.com Logo" class="w-14 h-14 rounded-full shadow-elegant" />
+            <div class="hidden sm:block">
+              <h1 class="text-2xl font-bold text-gradient">সবকিছু.com</h1>
+              <p class="text-sm text-muted-foreground -mt-1">এক ক্লিকে সবকিছু।</p>
+            </div>
+          </a>
+          <div class="flex items-center gap-2">
+            <nav class="hidden lg:flex items-center gap-6">
+              <a href="index.html" class="nav-link">হোম</a>
+              <a href="about.html" class="nav-link">আমাদের সম্পর্কে</a>
+              <a href="partners.html" class="nav-link">পার্টনার</a>
+              <a href="contact.html" class="nav-link">যোগাযোগ</a>
+            </nav>
+            <button id="cart-btn" class="relative p-2 rounded-full hover:bg-accent hover:text-primary transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+              <span id="cart-item-count" class="absolute -top-1 -right-1 bg-secondary text-secondary-foreground text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+            </button>
+            <button id="theme-toggle-btn" class="p-2 rounded-full hover:bg-accent hover:text-primary transition-colors">
+              <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+              <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="py-12 md:py-20">
+      <section class="py-16 px-4 animate-fade-in">
+        <div class="max-w-6xl mx-auto">
+          <div class="text-center mb-12">
+            <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">আমাদের সম্পর্কে</span>
+            <h2 class="text-4xl font-bold text-gradient mb-6">সবকিছু.com – আমাদের পরিচয়</h2>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+              <div class="space-y-4">
+                <p class="text-lg text-foreground leading-relaxed"><strong>সবকিছু.com</strong> একটি অনলাইন প্ল্যাটফর্ম যেখানে এক ক্লিকেই পাওয়া যায় আপনার দৈনন্দিন জীবনের সব প্রয়োজনীয় জিনিস।</p>
+                <p class="text-muted-foreground leading-relaxed">আমরা বিশ্বাস করি – সময়ের সঠিক ব্যবহার আর বিশুদ্ধ পণ্যের নিশ্চয়তা দিতে পারলেই গ্রাহকের জীবনে স্বাচ্ছন্দ্য আসে।</p>
+              </div>
+              <div class="space-y-4">
+                <h3 class="text-xl font-bold text-foreground">আমাদের বৈশিষ্ট্য</h3>
+                <div class="space-y-3">
+                  <div class="flex items-start gap-3"><div class="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center mt-0.5"><span class="text-success"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span></div><span class="text-foreground leading-relaxed">সবকিছু এক জায়গায় – বাজার থেকে স্বাস্থ্যকর গ্রোসারি</span></div>
+                  <div class="flex items-start gap-3"><div class="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center mt-0.5"><span class="text-success"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span></div><span class="text-foreground leading-relaxed">100% খাঁটি ও বাছাইকৃত পণ্য</span></div>
+                  <div class="flex items-start gap-3"><div class="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center mt-0.5"><span class="text-success"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span></div><span class="text-foreground leading-relaxed">গ্রাহকের বিশ্বাস ও সন্তুষ্টি আমাদের প্রথম অগ্রাধিকার</span></div>
+                  <div class="flex items-start gap-3"><div class="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center mt-0.5"><span class="text-success"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></span></div><span class="text-foreground leading-relaxed">সহজ অর্ডার, দ্রুত ডেলিভারি</span></div>
+                </div>
+              </div>
+              <div class="p-6 bg-gradient-subtle rounded-xl border border-border/50">
+                <p class="text-foreground leading-relaxed"><strong>সবকিছু.com</strong>-এর মূল লক্ষ্য — আধুনিক প্রযুক্তিকে কাজে লাগিয়ে মানুষের জীবনকে সহজ করা। আমরা চাই, আপনার কেনাকাটা হোক ঝামেলাহীন, নিরাপদ ও আনন্দদায়ক।</p>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center"><span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span></div><div class="space-y-2"><h4 class="text-lg font-bold text-foreground">গুণমান নিশ্চয়তা</h4><p class="text-muted-foreground leading-relaxed">প্রতিটি পণ্য কঠোর মান নিয়ন্ত্রণের মধ্য দিয়ে পরীক্ষিত</p></div></div></div></div>
+              <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center"><span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span></div><div class="space-y-2"><h4 class="text-lg font-bold text-foreground">নিরাপদ কেনাকাটা</h4><p class="text-muted-foreground leading-relaxed">সুরক্ষিত পেমেন্ট ও ব্যক্তিগত তথ্যের গোপনীয়তা</p></div></div></div></div>
+              <div class="card-modern"><div class="p-6"><div class="flex items-start gap-4"><div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center"><span class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></span></div><div class="space-y-2"><h4 class="text-lg font-bold text-foreground">দ্রুত ডেলিভারি</h4><p class="text-muted-foreground leading-relaxed">সারা বাংলাদেশে দ্রুততম ডেলিভারি সেবা</p></div></div></div></div>
+              <div class="card-modern bg-gradient-secondary text-secondary-foreground"><div class="p-6"><div class="grid grid-cols-2 gap-6 text-center"><div><div class="text-2xl font-bold">500+</div><div class="text-sm opacity-90">সন্তুষ্ট গ্রাহক</div></div><div><div class="text-2xl font-bold">98%</div><div class="text-sm opacity-90">পণ্যের গুণমান</div></div></div></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-card/95 backdrop-blur-md py-8 border-t border-border mt-16">
+        <div class="container mx-auto px-4 text-center text-sm text-muted-foreground">
+            <p>&copy; 2024 সবকিছু.com. সকল অধিকার সংরক্ষিত।</p>
+        </div>
+    </footer>
+  </div>
+
+  <div id="modals-container"></div>
+  <div id="toast" class="toast">
+    <div class="font-bold" id="toast-title"></div>
+    <div id="toast-description"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

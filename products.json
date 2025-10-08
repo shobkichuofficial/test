@@ -1,0 +1,187 @@
+[
+  {
+    "id": "balachao_1kg",
+    "name": "চিংড়ি বালাচাও (1 kg)",
+    "name_en": "Chingri Balachao (1 kg)",
+    "weight": "1kg",
+    "price": 1099,
+    "image": "assets/prodact6.jpg",
+    "description": "বিশেষ অফার! 1 কেজির এই প্যাকে পাচ্ছেন ফ্রি ডেলিভারি!",
+    "features": [
+      "ফ্রেশ ড্রাই চিংড়ি",
+      "আসল মসলা",
+      "ঝাঁজালো স্বাদ",
+      "হোমমেড ফ্লেভার",
+      "ডেলিভারি চার্জ ফ্রি"
+    ],
+    "freeDelivery": true,
+    "stock": 50,
+    "rating": 5
+  },
+  {
+    "id": "balachao_800g",
+    "name": "চিংড়ি বালাচাও (800 g)",
+    "name_en": "Chingri Balachao (800 gram)",
+    "weight": "800g",
+    "price": 899,
+    "image": "assets/prodact5.jpg",
+    "description": "বিশেষ অফার! 800 গ্রামের এই প্যাকে পাচ্ছেন ফ্রি ডেলিভারি!",
+    "features": [
+      "ফ্রেশ ড্রাই চিংড়ি",
+      "আসল মসলা",
+      "ঝাঁজালো স্বাদ",
+      "হোমমেড ফ্লেভার",
+      "ডেলিভারি চার্জ ফ্রি"
+    ],
+    "freeDelivery": true,
+    "stock": 50,
+    "rating": 5
+  },
+  {
+    "id": "balachao_500g",
+    "name": "চিংড়ি বালাচাও (500 g)",
+    "name_en": "Chingri Balachao (500 gram)",
+    "weight": "500g",
+    "price": 649,
+    "image": "assets/prodact4.jpg",
+    "description": "বিশেষ অফার! 500 গ্রামের এই প্যাকে পাচ্ছেন ফ্রি ডেলিভারি!",
+    "features": [
+      "ফ্রেশ ড্রাই চিংড়ি",
+      "আসল মসলা",
+      "ঝাঁজালো স্বাদ",
+      "হোমমেড ফ্লেভার",
+      "ডেলিভারি চার্জ ফ্রি"
+    ],
+    "freeDelivery": true,
+    "stock": 50,
+    "rating": 5
+  },
+  {
+    "id": "balachao_300g",
+    "name": "চিংড়ি বালাচাও (300 g)",
+    "name_en": "Chingri Balachao (300 gram)",
+    "weight": "300g",
+    "price": 350,
+    "image": "assets/prodact3.jpg",
+    "description": "ঝালের স্বাদ আর খাঁটি চিংড়ির অনন্য সংমিশ্রণ। ঘরে বসেই অর্ডার করুন।",
+    "features": [
+      "ফ্রেশ ড্রাই চিংড়ি",
+      "আসল মসলা",
+      "ঝাঁজালো স্বাদ",
+      "হোমমেড ফ্লেভার",
+      "ডেলিভারি চার্জ প্রযোজ্য"
+    ],
+    "freeDelivery": false,
+    "stock": 50,
+    "rating": 4
+  },
+  {
+    "id": "balachao_250g",
+    "name": "চিংড়ি বালাচাও (250 g)",
+    "name_en": "Chingri Balachao (250 gram)",
+    "weight": "250g",
+    "price": 310,
+    "image": "assets/prodact_250.jpg",
+    "description": "বড় প্যাক, বড় স্বাদ। পরিবারের জন্য উপযুক্ত। ঘরে বসেই অর্ডার করুন।",
+    "features": [
+      "ফ্রেশ ড্রাই চিংড়ি",
+      "আসল মসলা",
+      "ঝাঁজালো স্বাদ",
+      "হোমমেড ফ্লেভার",
+      "উন্নতমানের উপাদান"
+    ],
+    "freeDelivery": false,
+    "stock": 50,
+    "rating": 5
+  },
+  {
+    "id": "achar_morich",
+    "name": "মরিচের আচার (500 g)",
+    "name_en": "Chili Pickle (500 gram)",
+    "weight": "500g",
+    "price": 480,
+    "image": "assets/achar_morich.jpg",
+    "description": "ঝালপ্রিয়দের জন্য স্পেশাল মরিচের আচার।",
+    "features": [
+      "তাজা কাঁচামরিচ",
+      "সরিষার তেল",
+      "বিশুদ্ধ মসলা",
+      "সম্পূর্ণ ঘরোয়া"
+    ],
+    "freeDelivery": false,
+    "stock": 30,
+    "rating": 5
+  },
+  {
+    "id": "achar_rosun",
+    "name": "রসুনের আচার (450 g)",
+    "name_en": "Garlic Pickle (450 gram)",
+    "weight": "450g",
+    "price": 480,
+    "image": "assets/achar_rosun.jpg",
+    "description": "স্বাস্থ্যকর ও সুস্বাদু রসুনের আচার।",
+    "features": [
+      "আস্ত রসুনের কোয়া",
+      "সরিষার তেল",
+      "বিশেষ মসলা",
+      "হজমে সহায়ক"
+    ],
+    "freeDelivery": false,
+    "stock": 30,
+    "rating": 5
+  },
+  {
+    "id": "achar_aam",
+    "name": "আমের আচার (450 g)",
+    "name_en": "Mango Pickle (450 gram)",
+    "weight": "450g",
+    "price": 480,
+    "image": "assets/achar_aam.jpg",
+    "description": "টক-ঝাল-মিষ্টি স্বাদের ঐতিহ্যবাহী আমের আচার।",
+    "features": [
+      "কাঁচা আমের টুকরো",
+      "বিশুদ্ধ সরিষার তেল",
+      "পাঁচফোড়ন",
+      "ঐতিহ্যবাহী স্বাদ"
+    ],
+    "freeDelivery": false,
+    "stock": 30,
+    "rating": 5
+  },
+  {
+    "id": "achar_jolpai",
+    "name": "জলপাইয়ের আচার (450 g)",
+    "name_en": "Olive Pickle (450 gram)",
+    "weight": "450g",
+    "price": 480,
+    "image": "assets/achar_jolpai.jpg",
+    "description": "জিভে জল আনা টক-ঝাল জলপাইয়ের আচার।",
+    "features": [
+      "তাজা জলপাই",
+      "সরিষার তেল",
+      "আখरोট ও মসলা",
+      "দারুণ স্বাদ"
+    ],
+    "freeDelivery": false,
+    "stock": 30,
+    "rating": 5
+  },
+  {
+    "id": "achar_mixed",
+    "name": "মিক্সড আচার (450 g)",
+    "name_en": "Mixed Pickle (450 gram)",
+    "weight": "450g",
+    "price": 480,
+    "image": "assets/achar_mixed.jpg",
+    "description": "আম, জলপাই, রসুন ও মরিচের সমন্বয়ে তৈরি বিশেষ মিক্সড আচার।",
+    "features": [
+      "বিভিন্ন ফলের মিশ্রণ",
+      "সরিষার তেল",
+      "সিক্রেট রেসিপি",
+      "অনন্য স্বাদ"
+    ],
+    "freeDelivery": false,
+    "stock": 30,
+    "rating": 5
+  }
+]

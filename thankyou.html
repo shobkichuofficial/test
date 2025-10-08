@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="bn" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ধন্যবাদ - সবকিছু.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: { 'hind': ['Hind Siliguri', 'sans-serif'], },
+          colors: {
+            border: "hsl(var(--border))", input: "hsl(var(--input))", ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))", foreground: "hsl(var(--foreground))",
+            primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))", glow: "hsl(var(--primary-glow))" },
+            secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+            destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+            muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+            accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+            popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
+            card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+            success: { DEFAULT: "hsl(var(--success))", foreground: "hsl(var(--success-foreground))" },
+          },
+           keyframes: {
+            "fade-in": { "0%": { opacity: "0", transform: "translateY(20px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
+            "scale-in": { "0%": { transform: "scale(0.95)", opacity: "0" }, "100%": { transform: "scale(1)", opacity: "1" } },
+          },
+          animation: { "fade-in": "fade-in 0.5s ease-out", "scale-in": "scale-in 0.3s ease-out" },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="thank-you-page-body" class="min-h-screen bg-background relative overflow-x-hidden font-hind flex items-center justify-center p-4">
+  <div class="fixed inset-0 opacity-5 pointer-events-none bg-dots-pattern"></div>
+  <main class="text-center animate-scale-in w-full max-w-3xl mx-auto">
+    <div class="card-modern w-full py-10 px-8">
+      <div class="mx-auto w-20 h-20 bg-success/10 rounded-full flex items-center justify-center mb-6">
+         <span class="text-5xl">🎉</span>
+      </div>
+      <h1 id="thank-you-heading" class="text-3xl font-bold mb-3">ধন্যবাদ!</h1>
+      <p id="thank-you-subheading" class="text-lg text-muted-foreground mb-8">আপনার অর্ডারটি সফলভাবে নিশ্চিত করা হয়েছে।</p>
+      
+      <div id="order-summary-details" class="mb-8 border border-border rounded-lg p-6 bg-background/50">
+        <p class="text-muted-foreground">লোড হচ্ছে...</p>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="index.html#products" class="btn-ghost inline-block text-lg font-bold py-3 px-8 rounded-lg transition-transform hover:scale-105">
+          আরো কেনাকাটা করুন
+        </a>
+        <a href="index.html" class="btn-primary inline-block text-lg font-bold py-3 px-8 rounded-lg transition-transform hover:scale-105">
+          হোম পেজে ফিরে যান
+        </a>
+      </div>
+    </div>
+  </main>
+  
+  <div id="modals-container"></div>
+  <div id="toast" class="toast"><div class="font-bold" id="toast-title"></div><div id="toast-description"></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
