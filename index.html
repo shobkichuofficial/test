@@ -157,8 +157,25 @@
             <span class="inline-block bg-secondary text-secondary-foreground mb-4 px-6 py-2 text-lg rounded-lg">📦 আমাদের সকল পণ্য 📦</span>
             <h2 class="text-4xl font-bold text-gradient">আপনার পছন্দের সেরা সব পণ্য</h2>
           </div>
+
+          <div id="filter-sort-controls" class="max-w-4xl mx-auto mb-10 p-4 card-modern flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2" id="filter-buttons">
+              <button data-filter="all" class="filter-btn active px-4 py-2 rounded-full text-sm font-medium">সব পণ্য</button>
+              <button data-filter="balachao" class="filter-btn px-4 py-2 rounded-full text-sm font-medium">বালাচাও</button>
+              <button data-filter="achar" class="filter-btn px-4 py-2 rounded-full text-sm font-medium">আচার</button>
+            </div>
+            <div class="flex items-center gap-2">
+              <label for="sort-select" class="text-sm font-medium text-muted-foreground">সাজান:</label>
+              <select id="sort-select" class="p-2 border rounded-md bg-input text-sm">
+                <option value="default">ডিফল্ট</option>
+                <option value="price-asc">দাম: কম থেকে বেশি</option>
+                <option value="price-desc">দাম: বেশি থেকে কম</option>
+              </select>
+            </div>
+          </div>
           <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             </div>
+             <p id="no-products-found" class="text-center text-muted-foreground py-10 hidden">এই ক্যাটাগরিতে কোনো পণ্য পাওয়া যায়নি।</p>
         </div>
       </section>
 
@@ -306,11 +323,42 @@
     </footer>
   </div>
 
-  <div id="modals-container"></div>
+  <div id="modals-container">
+    <div id="cart-modal" class="modal-overlay hidden">
+      <div class="modal-content max-w-2xl w-full animate-scale-in">
+        <div class="flex justify-between items-center p-4 border-b border-border">
+          <h3 class="text-xl font-bold text-gradient">আপনার শপিং কার্ট</h3>
+          <button id="cart-modal-close-btn" class="p-2 rounded-full hover:bg-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+        <div id="cart-modal-body" class="p-4 max-h-[60vh] overflow-y-auto">
+          <p class="text-center text-muted-foreground">আপনার কার্ট খালি।</p>
+        </div>
+        <div id="cart-modal-footer" class="p-4 border-t border-border bg-background/50">
+           </div>
+      </div>
+    </div>
+    </div>
+
   <div id="toast" class="toast">
     <div class="font-bold" id="toast-title"></div>
     <div id="toast-description"></div>
   </div>
+  
+  <style>
+    /* Style for active filter button */
+    .filter-btn.active {
+      background-image: var(--gradient-primary);
+      color: hsl(var(--primary-foreground));
+    }
+    .filter-btn {
+      transition: all 0.2s ease-in-out;
+    }
+    .filter-btn:not(.active):hover {
+      background-color: hsl(var(--accent));
+    }
+  </style>
 
   <script src="script.js"></script>
 </body>
