@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bn" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>সবকিছু.com - ওয়েবসাইটে স্বাগতম</title>
+  <meta name="description" content="সবকিছু.com এর মূল ওয়েবসাইট ভিজিট করুন এবং সেরা মানের পণ্য কিনুন আকর্ষণীয় অফারে।" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          fontFamily: { 'hind': ['Hind Siliguri', 'sans-serif'], },
+          colors: {
+            border: "hsl(var(--border))", input: "hsl(var(--input))", ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))", foreground: "hsl(var(--foreground))",
+            primary: { DEFAULT: "hsl(var(--primary))", foreground: "hsl(var(--primary-foreground))", glow: "hsl(var(--primary-glow))" },
+            secondary: { DEFAULT: "hsl(var(--secondary))", foreground: "hsl(var(--secondary-foreground))" },
+            destructive: { DEFAULT: "hsl(var(--destructive))", foreground: "hsl(var(--destructive-foreground))" },
+            muted: { DEFAULT: "hsl(var(--muted))", foreground: "hsl(var(--muted-foreground))" },
+            accent: { DEFAULT: "hsl(var(--accent))", foreground: "hsl(var(--accent-foreground))" },
+            popover: { DEFAULT: "hsl(var(--popover))", foreground: "hsl(var(--popover-foreground))" },
+            card: { DEFAULT: "hsl(var(--card))", foreground: "hsl(var(--card-foreground))" },
+            success: { DEFAULT: "hsl(var(--success))", foreground: "hsl(var(--success-foreground))" },
+            warning: { DEFAULT: "hsl(var(--warning))", foreground: "hsl(var(--warning-foreground))" },
+          },
+          backgroundImage: { 'gradient-primary': 'var(--gradient-primary)', 'gradient-secondary': 'var(--gradient-secondary)', 'gradient-subtle': 'var(--gradient-subtle)' },
+          boxShadow: { 'glow': 'var(--shadow-glow)', 'elegant': 'var(--shadow-elegant)' },
+          borderRadius: { lg: "var(--radius)", md: "calc(var(--radius) - 2px)", sm: "calc(var(--radius) - 4px)" },
+          keyframes: {
+            "fade-in": { "0%": { opacity: "0", transform: "translateY(20px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
+            "scale-in": { "0%": { transform: "scale(0.95)", opacity: "0" }, "100%": { transform: "scale(1)", opacity: "1" } },
+            "float": { "0%, 100%": { transform: "translateY(0px)" }, "50%": { transform: "translateY(-10px)" } }
+          },
+          animation: { "fade-in": "fade-in 0.5s ease-out", "scale-in": "scale-in 0.3s ease-out", "float": "float 3s ease-in-out infinite" },
+        },
+      },
+    };
+  </script>
+  
+  <style>
+    :root {
+      --background: 120 20% 98%;
+      --foreground: 120 15% 15%;
+      --card: 0 0% 100%;
+      --card-foreground: 120 15% 15%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 120 15% 15%;
+      --primary: 144 61% 35%;
+      --primary-foreground: 0 0% 100%;
+      --primary-glow: 144 70% 45%;
+      --secondary: 48 96% 53%;
+      --secondary-foreground: 120 15% 15%;
+      --muted: 120 20% 96%;
+      --muted-foreground: 120 10% 50%;
+      --accent: 144 30% 90%;
+      --accent-foreground: 144 61% 35%;
+      --destructive: 0 84% 60%;
+      --destructive-foreground: 0 0% 100%;
+      --success: 142 76% 36%;
+      --success-foreground: 0 0% 100%;
+      --warning: 25 95% 53%;
+      --warning-foreground: 120 15% 15%;
+      --border: 120 20% 90%;
+      --input: 120 20% 95%;
+      --ring: 144 61% 35%;
+      --radius: 0.75rem;
+      --gradient-primary: linear-gradient(135deg, hsl(144, 61%, 35%), hsl(144, 70%, 45%));
+      --gradient-secondary: linear-gradient(135deg, hsl(48, 96%, 53%), hsl(45, 100%, 60%));
+      --gradient-subtle: linear-gradient(135deg, hsl(120, 20%, 98%), hsl(120, 30%, 96%));
+      --shadow-elegant: 0 10px 30px -10px hsl(144 61% 35% / 0.2);
+      --shadow-glow: 0 0 40px hsl(144 70% 45% / 0.4);
+    }
+    .dark {
+      --background: 144 30% 8%;
+      --foreground: 120 15% 90%;
+      --card: 144 25% 12%;
+      --card-foreground: 120 15% 90%;
+      --popover: 144 25% 12%;
+      --popover-foreground: 120 15% 90%;
+      --primary: 144 70% 55%;
+      --primary-foreground: 144 30% 8%;
+      --primary-glow: 144 80% 65%;
+      --secondary: 48 96% 60%;
+      --secondary-foreground: 144 30% 8%;
+      --muted: 144 20% 15%;
+      --muted-foreground: 120 10% 65%;
+      --accent: 144 25% 18%;
+      --accent-foreground: 144 70% 55%;
+      --destructive: 0 75% 55%;
+      --destructive-foreground: 0 0% 100%;
+      --success: 142 70% 45%;
+      --success-foreground: 0 0% 100%;
+      --warning: 25 90% 60%;
+      --warning-foreground: 144 30% 8%;
+      --border: 144 20% 18%;
+      --input: 144 20% 15%;
+      --ring: 144 70% 55%;
+      --gradient-primary: linear-gradient(135deg, hsl(144, 70%, 45%), hsl(144, 80%, 55%));
+      --gradient-secondary: linear-gradient(135deg, hsl(48, 96%, 60%), hsl(45, 100%, 70%));
+      --gradient-subtle: linear-gradient(135deg, hsl(144, 30%, 8%), hsl(144, 25%, 12%));
+      --shadow-elegant: 0 10px 30px -10px hsl(144 70% 35% / 0.3);
+      --shadow-glow: 0 0 40px hsl(144 80% 55% / 0.3);
+    }
+    * { border-color: hsl(var(--border)); }
+    html { scroll-behavior: smooth; }
+    body { background-color: hsl(var(--background)); color: hsl(var(--foreground)); font-family: 'Hind Siliguri', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; }
+    .bg-dots-pattern {
+        background-image: radial-gradient(hsl(var(--border)) 1px, transparent 1px);
+        background-size: 1.5rem 1.5rem;
+    }
+    .text-gradient { background-image: var(--gradient-primary); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .btn-primary { background-image: var(--gradient-primary); color: hsl(var(--primary-foreground)); box-shadow: var(--shadow-elegant); transition: all 0.3s; }
+    .btn-primary:hover:not(:disabled) { box-shadow: var(--shadow-glow); transform: scale(1.05); }
+    .card-modern { background-color: hsla(var(--card) / 0.8); backdrop-filter: blur(4px); border: 1px solid hsla(var(--border) / 0.5); box-shadow: var(--shadow-elegant); transition: all 0.3s; border-radius: var(--radius); }
+  </style>
+</head>
+<body class="min-h-screen bg-background relative overflow-x-hidden font-hind flex items-center justify-center p-4">
+  
+  <div class="fixed inset-0 opacity-5 pointer-events-none bg-dots-pattern"></div>
+  
+  <main class="text-center animate-scale-in">
+    <div class="card-modern max-w-md w-full py-12 px-8">
+      
+      <img src="logo_3.jpg" alt="সবকিছু.com Logo" class="w-24 h-24 rounded-full shadow-elegant mx-auto mb-6 animate-float" />
+      
+      <h1 class="text-4xl font-bold text-gradient mb-3">সবকিছু.com</h1>
+      
+      <p class="text-lg text-muted-foreground mb-8">
+        আমাদের মূল ওয়েবসাইট ভিজিট করুন এবং সেরা সব পণ্য উপভোগ করুন।
+      </p>
+      
+      <a href="https://shobkichuofficial.github.io/" class="btn-primary inline-block text-lg font-bold py-3 px-10 rounded-lg transition-transform hover:scale-105 shadow-glow">
+        ওয়েবসাইট ভিজিট করুন
+      </a>
+      
+    </div>
+  </main>
+
+</body>
+</html>
