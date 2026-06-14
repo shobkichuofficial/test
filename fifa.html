@@ -155,6 +155,33 @@
 
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
+        /* Server Buttons */
+        .server-options {
+            display: flex;
+            gap: 15px;
+        }
+        .btn-server {
+            background: var(--bg-panel);
+            color: var(--text-main);
+            border: 1px solid var(--glass-border);
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-server.active {
+            background: var(--primary);
+            border-color: var(--primary-glow);
+        }
+        .btn-server:hover {
+            background: rgba(138, 21, 56, 0.5);
+        }
+
         /* Match Info Bar */
         .match-info-bar {
             display: flex;
@@ -323,6 +350,11 @@
                 </div>
                 <video id="video-player" controls autoplay playsinline></video>
             </div>
+            
+            <div class="server-options">
+                <button class="btn-server active" id="srv1" onclick="changeServer('https://live.kooran13.cfd/yalls2/index.m3u8', 'srv1')"><i class="fa-solid fa-server"></i> Server 1</button>
+                <button class="btn-server" id="srv2" onclick="changeServer('https://cors-proxy.cooks.fyi/http://147.135.114.221:8001/play/a00m/index.m3u8', 'srv2')"><i class="fa-solid fa-server"></i> Server 2 (New)</button>
+            </div>
 
             <div class="match-info-bar">
                 <div class="team-score">
@@ -378,22 +410,37 @@
     </footer>
 
     <script>
-        // HLS Streaming Logic
+        // HLS Streaming Logic with Server Switching
         const video = document.getElementById('video-player');
-        const videoSrc = 'https://live.kooran13.cfd/yalls2/index.m3u8';
+        let hls;
 
-        if (Hls.isSupported()) {
-            const hls = new Hls({ maxBufferLength: 30, maxMaxBufferLength: 60 });
-            hls.loadSource(videoSrc);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.MANIFEST_PARSED, function() {
-                video.play().catch(e => console.log("Autoplay blocked"));
-            });
-        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-            video.src = videoSrc;
-            video.addEventListener('loadedmetadata', function() {
-                video.play();
-            });
+        function initPlayer(src) {
+            if (Hls.isSupported()) {
+                if (hls) {
+                    hls.destroy();
+                }
+                hls = new Hls({ maxBufferLength: 30, maxMaxBufferLength: 60 });
+                hls.loadSource(src);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    video.play().catch(e => console.log("Autoplay blocked"));
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = src;
+                video.addEventListener('loadedmetadata', function() {
+                    video.play();
+                });
+            }
+        }
+
+        // Initialize default server
+        initPlayer('https://live.kooran13.cfd/yalls2/index.m3u8');
+
+        // Function to change server on button click
+        function changeServer(url, btnId) {
+            document.querySelectorAll('.btn-server').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(btnId).classList.add('active');
+            initPlayer(url);
         }
 
         // Live Chat Simulation (Creates the "Sticky" Vibe)
